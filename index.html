@@ -24,26 +24,130 @@
             transform: rotate(180deg);
         }
     </style>
+    <style id="theme-styles">
+        /* Default body styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .step-checkbox {
+            min-width: 1.25rem; /* 20px */
+            min-height: 1.25rem; /* 20px */
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] > summary .arrow-down {
+            transform: rotate(180deg);
+        }
+
+        /* Dark theme styles */
+        .dark-theme {
+            background-color: #1e293b; /* slate-800 */
+            color: #e2e8f0; /* slate-200 */
+        }
+        .dark-theme .container,
+        .dark-theme section,
+        .dark-theme details {
+            background-color: #334155; /* slate-700 */
+            color: #e2e8f0; /* slate-200 */
+            border-color: #475569; /* slate-600 */
+        }
+        .dark-theme header h1,
+        .dark-theme section h2,
+        .dark-theme details summary h2 {
+            color: #93c5fd; /* blue-300 */
+        }
+        .dark-theme header p {
+            color: #94a3b8; /* slate-400 */
+        }
+        .dark-theme label {
+             color: #e2e8f0; /* slate-200 */
+        }
+        .dark-theme a {
+            color: #60a5fa; /* blue-400 */
+        }
+         .dark-theme .step-checkbox {
+             accent-color: #60a5fa; /* blue-400 */
+         }
+         .dark-theme footer {
+             border-top-color: #475569; /* slate-600 */
+         }
+         .dark-theme footer p {
+             color: #94a3b8; /* slate-400 */
+         }
+         .dark-theme footer a {
+             color: #60a5fa; /* blue-400 */
+         }
+
+
+        /* Light theme styles */
+        .light-theme {
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-800 */
+        }
+         .light-theme .container,
+        .light-theme section,
+        .light-theme details {
+            background-color: #ffffff; /* white */
+            color: #334155; /* slate-800 */
+            border-color: #e2e8f0; /* slate-200 */
+        }
+        .light-theme header h1,
+        .light-theme section h2,
+        .light-theme details summary h2 {
+            color: #1d4ed8; /* blue-700 */
+        }
+         .light-theme header p {
+            color: #475569; /* slate-600 */
+        }
+         .light-theme label {
+             color: #475569; /* slate-700 */
+        }
+        .light-theme a {
+            color: #2563eb; /* blue-600 */
+        }
+         .light-theme .step-checkbox {
+             accent-color: #2563eb; /* blue-600 */
+         }
+         .light-theme footer {
+             border-top-color: #cbd5e1; /* slate-300 */
+         }
+          .light-theme footer p {
+             color: #64748b; /* slate-500 */
+         }
+         .light-theme footer a {
+             color: #2563eb; /* blue-600 */
+         }
+
+
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl">
-        <header class="text-center mb-8">
+<body class="dark-theme">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl rounded-xl shadow-lg">
+         <header class="text-center mb-8 flex flex-col items-center relative">
+             <button id="theme-toggle" class="absolute top-0 right-0 p-2 rounded-full bg-slate-600 text-slate-200 hover:bg-slate-500 transition-colors">
+                 <!-- Icon will be set by JS -->
+             </button>
             <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=gov.br&font=Inter" alt="Ícone gov.br" class="w-20 h-20 mx-auto mb-4 rounded-full">
-            <h1 class="text-3xl sm:text-4xl font-bold text-blue-700">Tutorial Interativo: Assinatura Digital gov.br</h1>
-            <p class="text-slate-600 mt-2 text-lg">Guia passo a passo para assinar seus documentos digitalmente.</p>
+            <h1 class="text-3xl sm:text-4xl font-bold">Tutorial Interativo: Assinatura Digital gov.br</h1>
+            <p class="mt-2 text-lg">Guia passo a passo para assinar seus documentos digitalmente.</p>
         </header>
 
-        <section id="prerequisites" class="mb-8 p-6 bg-blue-100 rounded-xl shadow-lg border border-blue-200">
-            <h2 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2 text-blue-600">
+        <section id="prerequisites" class="mb-8 p-6 rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
                 O que você vai precisar:
             </h2>
             <ul class="list-none space-y-3">
                 <li class="flex items-start">
-                    <input type="checkbox" id="chk-prereq1" class="step-checkbox mr-3 mt-1 accent-blue-600">
-                    <label for="chk-prereq1" class="text-slate-700"><strong>Conta gov.br:</strong> Nível <strong>Prata</strong> ou <strong>Ouro</strong>. Contas nível Bronze não permitem a assinatura digital.</label>
+                    <input type="checkbox" id="chk-prereq1" class="step-checkbox mr-3 mt-1">
+                    <label for="chk-prereq1"><strong>Conta gov.br:</strong> Nível <strong>Prata</strong> ou <strong>Ouro</strong>. Contas nível Bronze não permitem a assinatura digital.</label>
                 </li>
                 <li class="flex items-start">
                     <input type="checkbox" id="chk-prereq2" class="step-checkbox mr-3 mt-1 accent-blue-600">
@@ -229,6 +333,47 @@
                     // A rotação da seta já é feita por CSS, mas pode-se adicionar mais lógicas aqui se necessário.
                 });
             });
+
+            // Dark mode toggle logic
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const currentTheme = localStorage.getItem('theme');
+
+            // Apply saved theme or default to dark
+            if (currentTheme) {
+                body.className = currentTheme;
+            } else {
+                body.className = 'dark-theme'; // Default to dark theme
+            }
+
+            themeToggle.addEventListener('click', () => {
+                if (body.classList.contains('dark-theme')) {
+                    body.className = 'light-theme';
+                    localStorage.setItem('theme', 'light-theme');
+                } else {
+                    body.className = 'dark-theme';
+                    localStorage.setItem('theme', 'dark-theme');
+                }
+                 // Update icon based on current theme after toggle
+                updateThemeIcon();
+            });
+
+            // Function to update the icon based on the current theme
+            function updateThemeIcon() {
+                 if (body.classList.contains('dark-theme')) {
+                     themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.5-1.5l-1.591 1.591M3 12H5.25m-.386-6.364l1.591 1.591M12 12.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                      </svg>`; // Moon icon for dark mode
+                 } else {
+                     themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 0 18 12a9.72 9.72 0 0 0-3.752 3.002c1.359.429 2.675.66 4.002.66s2.643-.231 4.002-.66ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                      </svg>`; // Sun icon for light mode
+                 }
+            }
+
+            // Initial icon set
+            updateThemeIcon();
+
         });
     </script>
 </body>
