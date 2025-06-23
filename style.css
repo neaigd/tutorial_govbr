@@ -1,0 +1,114 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.step-checkbox {
+    min-width: 1.25rem; /* 20px */
+    min-height: 1.25rem; /* 20px */
+}
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details[open] > summary .arrow-down {
+    transform: rotate(180deg);
+}
+
+/* Default body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.step-checkbox {
+    min-width: 1.25rem; /* 20px */
+    min-height: 1.25rem; /* 20px */
+}
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details[open] > summary .arrow-down {
+    transform: rotate(180deg);
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #1e293b; /* slate-800 */
+    color: #e2e8f0; /* slate-200 */
+}
+.dark-theme .container,
+.dark-theme section,
+.dark-theme details {
+    background-color: #334155; /* slate-700 */
+    color: #e2e8f0; /* slate-200 */
+    border-color: #475569; /* slate-600 */
+}
+.dark-theme header h1,
+.dark-theme section h2,
+.dark-theme details summary h2 {
+    color: #93c5fd; /* blue-300 */
+}
+.dark-theme header p {
+    color: #94a3b8; /* slate-400 */
+}
+.dark-theme label {
+     color: #e2e8f0; /* slate-200 */
+}
+.dark-theme a {
+    color: #60a5fa; /* blue-400 */
+}
+ .dark-theme .step-checkbox {
+     accent-color: #60a5fa; /* blue-400 */
+ }
+ .dark-theme footer {
+     border-top-color: #475569; /* slate-600 */
+ }
+ .dark-theme footer p {
+     color: #94a3b8; /* slate-400 */
+ }
+ .dark-theme footer a {
+     color: #60a5fa; /* blue-400 */
+ }
+
+
+/* Light theme styles */
+.light-theme {
+    background-color: #f8fafc; /* slate-50 */
+    color: #334155; /* slate-800 */
+}
+ .light-theme .container,
+.light-theme section,
+.light-theme details {
+    background-color: #ffffff; /* white */
+    color: #334155; /* slate-800 */
+    border-color: #e2e8f0; /* slate-200 */
+}
+.light-theme header h1,
+.light-theme section h2,
+.light-theme details summary h2 {
+    color: #1d4ed8; /* blue-700 */
+}
+ .light-theme header p {
+    color: #475569; /* slate-600 */
+}
+ .light-theme label {
+     color: #475569; /* slate-700 */
+}
+.light-theme a {
+    color: #2563eb; /* blue-600 */
+}
+ .light-theme .step-checkbox {
+     accent-color: #2563eb; /* blue-600 */
+ }
+ .light-theme footer {
+     border-top-color: #cbd5e1; /* slate-300 */
+ }
+  .light-theme footer p {
+     color: #64748b; /* slate-500 */
+ }
+ .light-theme footer a {
+     color: #2563eb; /* blue-600 */
+ }
