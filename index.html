@@ -1,0 +1,236 @@
+[200~<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Interativo: Assinatura Digital gov.br</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .step-checkbox {
+            min-width: 1.25rem; /* 20px */
+            min-height: 1.25rem; /* 20px */
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] > summary .arrow-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8 max-w-4xl">
+        <header class="text-center mb-8">
+            <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=gov.br&font=Inter" alt="Ícone gov.br" class="w-20 h-20 mx-auto mb-4 rounded-full">
+            <h1 class="text-3xl sm:text-4xl font-bold text-blue-700">Tutorial Interativo: Assinatura Digital gov.br</h1>
+            <p class="text-slate-600 mt-2 text-lg">Guia passo a passo para assinar seus documentos digitalmente.</p>
+        </header>
+
+        <section id="prerequisites" class="mb-8 p-6 bg-blue-100 rounded-xl shadow-lg border border-blue-200">
+            <h2 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2 text-blue-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                O que você vai precisar:
+            </h2>
+            <ul class="list-none space-y-3">
+                <li class="flex items-start">
+                    <input type="checkbox" id="chk-prereq1" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                    <label for="chk-prereq1" class="text-slate-700"><strong>Conta gov.br:</strong> Nível <strong>Prata</strong> ou <strong>Ouro</strong>. Contas nível Bronze não permitem a assinatura digital.</label>
+                </li>
+                <li class="flex items-start">
+                    <input type="checkbox" id="chk-prereq2" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                    <label for="chk-prereq2" class="text-slate-700"><strong>Acesso à internet:</strong> Pelo computador ou celular.</label>
+                </li>
+                <li class="flex items-start">
+                    <input type="checkbox" id="chk-prereq3" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                    <label for="chk-prereq3" class="text-slate-700"><strong>Documento em formato digital:</strong> O arquivo que você deseja assinar (ex: PDF, DOCX, ODT).</label>
+                </li>
+            </ul>
+        </section>
+
+        <details class="mb-6 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <summary class="p-6 cursor-pointer flex justify-between items-center hover:bg-slate-50 transition-colors">
+                <h2 class="text-2xl font-semibold text-blue-700 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                    Parte 1: Verificando e Aumentando o Nível da Conta
+                </h2>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 arrow-down transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </summary>
+            <div class="p-6 border-t border-slate-200">
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part1-1" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part1-1" class="text-slate-700">Acesse o site <a href="https://www.gov.br" target="_blank" class="text-blue-600 hover:underline font-medium">gov.br</a> e faça login com seu CPF e senha.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part1-2" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part1-2" class="text-slate-700">Verifique o nível da sua conta em "Selos de Confiabilidade" ou "Privacidade" > "Gerenciar selos de confiabilidade".</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part1-3" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part1-3" class="text-slate-700"><strong>Se nível Bronze, aumente para Prata ou Ouro:</strong></label>
+                    </li>
+                    <ul class="list-disc space-y-3 pl-10 text-slate-700">
+                        <li><strong>Nível Prata:</strong> Validação facial (app gov.br com CNH), login com bancos credenciados, ou login SIGEPE (servidores públicos federais).</li>
+                        <li><strong>Nível Ouro:</strong> Validação facial (app gov.br com dados da Justiça Eleitoral/TSE), ou com Certificado Digital ICP-Brasil.</li>
+                    </ul>
+                     <li class="flex items-start">
+                        <input type="checkbox" id="chk-part1-4" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part1-4" class="text-slate-700">Siga as instruções na tela para completar o aumento de nível. Pode ser necessário instalar o app "gov.br".</label>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="mb-6 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <summary class="p-6 cursor-pointer flex justify-between items-center hover:bg-slate-50 transition-colors">
+                <h2 class="text-2xl font-semibold text-blue-700 flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                    </svg>
+                    Parte 2: Assinando o Documento Digitalmente
+                </h2>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 arrow-down transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </summary>
+            <div class="p-6 border-t border-slate-200">
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-1" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-1" class="text-slate-700">Acesse o Portal de Assinatura Eletrônica: <a href="https://assinador.iti.br" target="_blank" class="text-blue-600 hover:underline font-medium">assinador.iti.br</a>.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-2" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-2" class="text-slate-700">Clique em "Entrar com gov.br" e faça login.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-3" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-3" class="text-slate-700">Clique em "Escolher arquivo" e selecione o documento a ser assinado.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-4" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-4" class="text-slate-700">Clique em "Avançar".</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-5" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-5" class="text-slate-700">Se for PDF, clique no local do documento onde a assinatura visual deve aparecer.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-6" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-6" class="text-slate-700">Selecione "Assinatura gov.br".</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-7" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-7" class="text-slate-700">Clique em "Assinar".</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-8" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-8" class="text-slate-700">Receba o código de segurança no app gov.br (ou SMS) e digite-o no campo solicitado. Autorize.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-part2-9" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-part2-9" class="text-slate-700">Clique em "Baixar arquivo assinado" para salvar seu documento.</label>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="mb-6 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <summary class="p-6 cursor-pointer flex justify-between items-center hover:bg-slate-50 transition-colors">
+                <h2 class="text-2xl font-semibold text-blue-700 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2 text-blue-600">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 0 0-3.15 0v1.5m3.15 0v.75A1.575 1.575 0 0 1 8.475 6.75h-1.5a1.575 1.575 0 0 1-1.575-1.575V4.575m5.85 0V3.75A1.575 1.575 0 0 0 9.525 2.25h-3A1.575 1.575 0 0 0 5 3.75v.825m5.85 0h-1.5m1.5 0A1.575 1.575 0 0 1 12.3 6.75v1.5A1.575 1.575 0 0 1 10.725 10.5h-1.5A1.575 1.575 0 0 1 7.65 8.25v-1.5m3.075 0h-.075M15.75 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-3 3h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    Como Verificar a Validade da Assinatura
+                </h2>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 arrow-down transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </summary>
+            <div class="p-6 border-t border-slate-200">
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-verify-1" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-verify-1" class="text-slate-700">Acesse o Verificador de Conformidade do ITI: <a href="https://verificador.iti.gov.br" target="_blank" class="text-blue-600 hover:underline font-medium">verificador.iti.gov.br</a>.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-verify-2" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-verify-2" class="text-slate-700">Faça o upload do documento assinado que deseja verificar.</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="chk-verify-3" class="step-checkbox mr-3 mt-1 accent-blue-600">
+                        <label for="chk-verify-3" class="text-slate-700">O sistema analisará e informará a validade das assinaturas.</label>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="mb-6 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <summary class="p-6 cursor-pointer flex justify-between items-center hover:bg-slate-50 transition-colors">
+                <h2 class="text-2xl font-semibold text-blue-700 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 mr-2 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.354a15.054 15.054 0 0 1-4.5 0M3.75 10.5a2.25 2.25 0 0 0 4.5 0V9a2.25 2.25 0 0 0-4.5 0v1.5Zm15-3a2.25 2.25 0 0 0 4.5 0V9a2.25 2.25 0 0 0-4.5 0v1.5Zm-6.75 6.75a2.25 2.25 0 0 0 4.5 0V9a2.25 2.25 0 0 0-4.5 0v1.5Zm-6.75 0a2.25 2.25 0 0 0 4.5 0V9a2.25 2.25 0 0 0-4.5 0v1.5Z" />
+                    </svg>
+                    Dicas Importantes
+                </h2>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 arrow-down transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </summary>
+            <div class="p-6 border-t border-slate-200">
+                <ul class="list-disc space-y-3 pl-6 text-slate-700">
+                    <li><strong>Segurança:</strong> Mantenha seus dados do gov.br seguros e nunca compartilhe sua senha.</li>
+                    <li><strong>Aplicativo gov.br:</strong> Ter o app "gov.br" instalado no celular facilita a autorização das assinaturas.</li>
+                    <li><strong>Dúvidas:</strong> Consulte as seções de Perguntas Frequentes (FAQ) no portal gov.br ou no site do ITI.</li>
+                    <li><strong>Validade Jurídica:</strong> Assinaturas gov.br (Nível Prata/Ouro) são avançadas e têm validade jurídica (Lei nº 14.063/2020).</li>
+                </ul>
+            </div>
+        </details>
+
+        <footer class="text-center mt-12 py-6 border-t border-slate-300">
+            <p class="text-sm text-slate-500">Este é um guia não oficial com fins educacionais.</p>
+            <p class="text-sm text-slate-500">Para informações oficiais, visite <a href="https://www.gov.br" target="_blank" class="text-blue-600 hover:underline font-medium">www.gov.br</a>.</p>
+            <p class="text-xs text-slate-400 mt-2">Ícone da header por Placehold.co. Ícones SVG por Heroicons.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Script para persistir o estado dos checkboxes (opcional, usando localStorage)
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.step-checkbox');
+            checkboxes.forEach(checkbox => {
+                // Carregar estado salvo
+                if (localStorage.getItem(checkbox.id) === 'true') {
+                    checkbox.checked = true;
+                }
+                // Salvar estado ao mudar
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(checkbox.id, checkbox.checked);
+                });
+            });
+
+            // Lógica para abrir/fechar "details" e girar a seta
+             const detailsElements = document.querySelectorAll('details');
+            detailsElements.forEach(details => {
+                details.addEventListener('toggle', function() {
+                    // A rotação da seta já é feita por CSS, mas pode-se adicionar mais lógicas aqui se necessário.
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
